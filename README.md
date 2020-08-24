@@ -1,24 +1,14 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# パーソナルジム PEACE fitness
+### 営業時間
+** 年中無休 24時間 **
+----
+### 完全予約制
+TELL ** 078-854-7277 **
+----
+### 住所
+** 兵庫県神戸市灘区森後町2-1-9 **
+** グランディアみなと神戸六甲館 3F **
+JR六甲道駅北側から徒歩3分
+----
+### 入会金
+** 無料 **
