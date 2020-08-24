@@ -1,0 +1,117 @@
+.wrapper
+  .header
+    .header-top PEACE FITNESS
+    .header-top2 パーソナルジム
+    %i.fas.fa-angle-double-down
+  .banner
+    .banner__info
+      .touch About
+    .banner__info
+      = link_to "#system", class: "touch" do
+        %i.fas.fa-spinner
+        System
+    .banner__info
+      = link_to "#address", class: "touch" do
+        %i.far.fa-map
+        Address
+    .banner__info
+      = link_to "#insta", class: "touch" do
+        %i.fab.fa-instagram
+        Instagram
+    .banner__info
+      = link_to "#business", class: "touch" do
+        %i.far.fa-hourglass
+        Business
+  .main
+    .main__open
+      .intro 解剖学、トレーニング、栄養学に
+      .intro 精通したトレーナーが
+      .intro マンツーマンで教えます
+    .main__campaign
+      .yoga
+        = image_tag "yoga.png", size: "350x400"
+      .free
+        .free__in 今なら入会金が
+        .free__in2 ￥0
+    #system
+    .main__system
+      .title
+        %i.fas.fa-spinner
+        System
+      .experiences
+        完全予約制
+      .experience
+        初回体験パーソナル
+        ￥3,500円(税込み)
+      .plan
+        −料金プラン−
+        .time 1set 75分
+        .money
+          1回 7,000円
+        .money
+          4回(週1回) 24,000円
+          .survies 4,000円お得
+        .money
+          8回(週2回) 48,000円
+          .survies 8,000円お得
+        .money
+          12回(週3回) 72,000円
+          .survies 12,000円お得
+    #business
+    .hours
+      .title 
+        %i.far.fa-hourglass
+        Business 
+      .hours__all
+        = image_tag "yellow.jpg"
+        .hours__all__info
+          .daytime 営業日時/営業時間
+          .day 年中無休
+          .day 24時間
+    #address
+    .address
+      .title
+        %i.far.fa-map
+        Address
+      .map
+        %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.570433168682!2d135.23573331559828!3d34.716013189905006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008c3bd18a6f21%3A0x12966d18e8937a64!2z44CSNjU3LTAwMjgg5YW15bqr55yM56We5oi45biC54GY5Yy65qOu5b6M55S677yS5LiB55uu77yRIOOCsOODqeODs-ODh-OCo-OCoiDjgb_jgarjgajnpZ7miLgg5YWt55Sy6aSo!5e0!3m2!1sja!2sjp!4v1598265239872!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "400"}
+        .map__info
+          = link_to "https://www.google.co.jp/maps/place/%E3%80%92657-0028+%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A5%9E%E6%88%B8%E5%B8%82%E7%81%98%E5%8C%BA%E6%A3%AE%E5%BE%8C%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91+%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2+%E3%81%BF%E3%81%AA%E3%81%A8%E7%A5%9E%E6%88%B8+%E5%85%AD%E7%94%B2%E9%A4%A8/@34.7160132,135.2357333,17z/data=!3m1!4b1!4m5!3m4!1s0x60008c3bd18a6f21:0x12966d18e8937a64!8m2!3d34.7160088!4d135.237922?hl=ja", class: "code" do
+            .code 〒 657-0028
+            .code 兵庫県神戸市灘区森後町2-1-9
+            .code グランディアみなと神戸六甲館3F
+          .tells
+            .tell2 TELL
+            %a.tell{:href => "tel:078-854-7277"} 078-854-7277 
+    #insta
+    .insta
+      .title
+        %i.fab.fa-instagram
+        Instagram
+      .insta-image
+        = link_to "https://www.instagram.com/peace_fitness_training/?hl=ja" do
+          = image_tag "insta.jpg", size: "370x370"
+        .insta-info
+          当フィットネス(PEACE FITNESS)の
+          %br 最新情報などはこちらの
+          インスタグラムから発信しています。
+  .footer
+    .footer__info
+      .image
+        = image_tag "black.png"
+      .footer-light
+        .name PEACE FITNESS
+        .company 株式会社 IGA
+        .boss 代表 伊賀崎 克典
+        %a.phone{:href => "tel:078-854-7277"} 078-854-7277
+  .btn
+    .btn__left
+      御予約はこちら
+    .btn__all
+      = link_to "tel:078-854-7277", class: "phone" do
+        %i.fas.fa-phone
+    .btn__all
+      = link_to "https://www.instagram.com/peace_fitness_training/?hl=ja", class: "insta" do
+        %i.fab.fa-instagram
+      
+
