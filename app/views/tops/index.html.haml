@@ -1,11 +1,14 @@
 .wrapper
+  #header
   .header
     .header-top PEACE FITNESS
     .header-top2 パーソナルジム
-    %i.fas.fa-angle-double-down
+    = link_to "#main" do
+      %i.fas.fa-angle-double-down
   .banner
     .banner__info
-      .touch About
+      = link_to "#header", class: "touch" do
+        About
     .banner__info
       = link_to "#system", class: "touch" do
         %i.fas.fa-spinner
@@ -23,6 +26,7 @@
         %i.far.fa-hourglass
         Business
   .main
+    #main
     .main__open
       .intro 解剖学、トレーニング、栄養学に
       .intro 精通したトレーナーが
