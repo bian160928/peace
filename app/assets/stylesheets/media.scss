@@ -1,0 +1,411 @@
+$breakpoint: 430px;
+@mixin mq {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@include mq {
+  * {
+    box-sizing: border-box;
+  }
+  .wrapper {
+    height: 100vh;
+    width: 100%;
+    .header {
+      background-image: url("people640.jpg");
+      background-size: cover;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .header-top {
+        color: white;
+        font-family: monospace;
+        font-size: 70px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        letter-spacing: 5px;
+        text-align: center;
+        background-color: rgba(255, 238, 1, 0.4);
+        padding-left: 5px;
+        padding-right: 5px;
+        cursor: auto;
+        transition: all  0.6s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      .header-top2 {
+        letter-spacing: 3px;
+        font-size: 30px;
+        color: whitesmoke;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      }
+      .fas {
+        color: white;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 100px;
+        position: absolute;
+        bottom: 90px;
+        opacity:0;
+        left: 155px;
+        animation-name:sample01;
+        animation-duration:3.5s; 
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        @keyframes sample01 {
+        0% {
+         opacity: 0;
+         transform: translateY(-30px);
+        }
+          50%{
+            opacity: 1;
+             transform: translateY(0);
+          }
+         100% {
+         opacity:0;
+         transform: translateY(30px);
+         } 
+        }
+      }
+    }
+    .banner {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      &__info {
+        width: 25%;
+        border: 1px solid rgb(224, 224, 224);
+        font-family: cursive;
+        color: rgb(255, 230, 0);
+        background-color: rgba(255, 255, 255, 0.2);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        font-size: 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all  0.4s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+        .touch {
+          text-decoration: none;
+          color: rgb(255, 230, 0);
+          text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        }
+        .fas {
+          color: lightgray;
+          display: none;
+        }
+        .fab {
+          color: lightgray;
+          display: none;
+        }
+        .far {
+          color: lightgray;
+          display: none;
+        }
+      }
+    }
+    .main {
+      min-height: 100vh;
+      &__open {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(255, 238, 1, 0.4);
+        text-align: center;
+        .intro {
+          font-size: 22px;
+          color: white;
+          text-shadow: 0 0 9px rgba(0,0,0,0.4);
+          letter-spacing: 3px;
+        }
+      }
+      &__campaign {
+        height: 530px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid whitesmoke;
+        .yoga {
+          width: 200px;
+          height: 270px;
+        }
+        .free {
+          display: flex;
+          flex-direction: column;
+          &__in {
+            font-size: 20px;
+            border-bottom: 2px solid yellow;
+          }
+          &__in2 {
+            font-size: 90px;
+            text-align: center;
+            text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+            font-weight: bold;
+          }
+        }
+      }
+      &__system {
+        height: 950px;
+        background-color: rgba(255, 238, 1, 0.4);
+        border-bottom: 1px solid lightgrey;
+        .title {
+          color: white;
+          font-size: 50px;
+          text-align: center;
+          font-family: cursive;
+          text-shadow: 0 0 2px rgba(0,0,0,0.6);
+          margin-bottom: 20px;
+          padding-top: 30px;
+          .fas {
+            color: lightgray;
+          }
+        }
+        .experiences {
+          text-align: center;
+          font-size: 25px;
+          color: white;
+          text-shadow: 0 0 5px rgba(0,0,0,0.8);
+          margin-bottom: 5px;
+        }
+        .experience {
+          text-align: center;
+          font-size: 20px;
+          color: white;
+          text-shadow: 0 0 5px rgba(0,0,0,0.8);
+          margin-bottom: 25px;
+        }
+        .plan {
+          font-size: 45px;
+          color: black;
+          text-align: center;
+          font-family: monospace;
+          margin: 0 auto;
+          width: 380px;
+          padding-bottom: 80px;
+          padding-top: 20px;
+          background-color: white;
+        }
+        .time {
+          font-size: 20px;
+          text-shadow: none;
+        }
+        .money {
+          font-size: 30px;
+          color: black;
+          text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+          text-align: center;
+          padding-top: 30px;
+          .survies {
+            font-size: 30px;
+          }
+        }
+      }
+      .hours {
+        height: 300px;
+        border-bottom: 1px solid lightgrey;
+        .title {
+          text-align: center;
+          font-size: 50px;
+          margin-bottom: 20px;
+          margin-top: 30px;
+          font-family: cursive;
+          text-shadow: 0 0 1px rgba(0,0,0,0.6);
+          color: rgb(255, 230, 0);
+          .far {
+            color: lightgray;
+          }
+        }
+        &__all {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .image-logo {
+            width: 180px;
+            height: 140px;
+          }
+          .daytime {
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+          }
+          .day {
+            font-size: 20px;
+            text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+          }
+        }
+      }
+      .address {
+        height: 500px;
+        border-bottom: 1px solid lightgrey;
+        .title {
+          text-align: center;
+          font-size: 50px;
+          margin-bottom: 20px;
+          margin-top: 30px;
+          font-family: cursive;
+          text-shadow: 0 0 1px rgba(0,0,0,0.6);
+          color: rgb(255, 230, 0);
+          .far {
+            color: lightgray;
+          }
+        }
+        .map {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          iframe {
+            height: 180px;
+            width: 180px;
+          }
+          &__info {
+            font-size: 20px;
+            text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+            .code {
+              margin-top: 20px;
+              text-decoration: none;
+              color: black;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .tells {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 20px;
+              .tell {
+                display: block;
+                text-decoration: none;
+                color: black;
+                margin-left: 20px;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+      .insta {
+        height: 420px;
+        .title {
+          text-align: center;
+          font-size: 50px;
+          margin-top: 30px;
+          font-family: cursive;
+          text-shadow: 0 0 1px rgba(0,0,0,0.6);
+          color: rgb(255, 230, 0);
+          .fab {
+            color: lightgray;
+          }
+        }
+        .insta-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          flex-direction: column;
+          .image-insta {
+            width: 200px;
+            height: 200px;
+          }
+          .insta-info {
+            font-size: 20px;
+            text-shadow: 0 0 100px rgba(255, 238, 1, 1);
+          }
+        }
+      }
+    }
+    .footer {
+      height: 220px;
+      background-color: black;
+      &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 30px;
+        .footer-image {
+          width: 180px;
+          height: 140px;
+        }
+        .footer-light {
+          color: rgb(255, 230, 0);
+          margin-left: 10px;
+          .name {
+            font-size: 20px;
+          }
+          .company {
+            font-size: 15px;
+          }
+          .boss {
+            font-size: 25px;
+          }
+          .phone {
+            text-decoration: none;
+            color: rgb(255, 230, 0);
+            font-size: 20px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      &__left {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 40px;
+        margin-top: 130px;
+        color: rgb(255, 230, 0);
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        border: 1px solid lightgray;
+      }
+      &__all {
+        margin-top: 80px;
+        border: 1px solid lightgray;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: all  0.4s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.7);
+        }
+        .phone {
+          font-size: 40px;
+          text-decoration: none;
+          color: rgb(255, 230, 0);
+          text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        }
+        .insta {
+          font-size: 45px;
+          text-decoration: none;
+          color: rgb(255, 230, 0);
+          text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}
