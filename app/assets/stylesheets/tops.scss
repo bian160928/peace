@@ -8,11 +8,11 @@
     background-image: url("adult.jpg");
     background-size: cover;
     min-height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
     .header-top {
       color: white;
       font-family: monospace;
@@ -40,7 +40,7 @@
       text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 100px;
       position: absolute;
-      bottom: 30px;
+      bottom: 50px;
       opacity:0;
       animation-name:sample01;
       animation-duration:3.5s; 
