@@ -37,9 +37,29 @@
     }
     .fas {
       color: white;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
       font-size: 100px;
       position: absolute;
-      bottom: 15px;
+      bottom: 30px;
+      opacity:0;
+      animation-name:sample01;
+      animation-duration:3.5s; 
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      @keyframes sample01 {
+      0% {
+       opacity: 0;
+       transform: translateY(-30px);
+      }
+        50%{
+          opacity: 1;
+           transform: translateY(0);
+        }
+       100% {
+       opacity:0;
+       transform: translateY(30px);
+       } 
+      }
     }
   }
   .banner {
