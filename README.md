@@ -23,6 +23,6 @@ JR六甲道駅北側から徒歩3分
 ----
 ### 入会金
 無料
-
+----
 ### URL
-https://peaceness.herokuapp.com/
+#### https://peaceness.herokuapp.com/
