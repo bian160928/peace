@@ -46,7 +46,7 @@ $breakpoint: 750px;
         font-size: 60px;
         bottom: 90px;
         opacity:0.6;
-        left: 155px;
+        left: 50%;
         animation-name:sample01;
         animation-duration:5s; 
         animation-iteration-count: infinite;
@@ -74,6 +74,7 @@ $breakpoint: 750px;
       position: fixed;
       top: 0;
       z-index: 10;
+      display: none;
       .check:checked ~ .wrapper {
         -webkit-transform: translateX(-300px);
         -ms-transform: translateX(-300px);
@@ -82,9 +83,9 @@ $breakpoint: 750px;
       .drawer-menu {
         position: fixed;
         top: 0;
-        right: 0;
-        width: 100%;
-        height: 23vh;
+        left: 0;
+        width: 30%;
+        height: 100vh;
         background-color: rgba(255, 238, 1, 0.4);
         -webkit-transform: perspective(500px) rotateY(-90deg);
         transform: perspective(500px) rotateY(-90deg);
@@ -147,41 +148,6 @@ $breakpoint: 750px;
         z-index: 3;
       }
     }
-      &__info {
-        width: 25%;
-        border: 1px solid rgb(224, 224, 224);
-        font-family: cursive;
-        color: rgb(255, 230, 0);
-        background-color: rgba(255, 255, 255, 0.2);
-        text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-        font-size: 20px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all  0.4s ease;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.6);
-        }
-        .touch {
-          text-decoration: none;
-          color: rgb(255, 230, 0);
-          text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-        }
-        .fas {
-          color: lightgray;
-          display: none;
-        }
-        .fab {
-          color: lightgray;
-          display: none;
-        }
-        .far {
-          color: lightgray;
-          display: none;
-        }
-      }
     .main {
       min-height: 100vh;
       &__open {
@@ -232,11 +198,12 @@ $breakpoint: 750px;
         }
       }
       &__system {
-        height: 800px;
+        height: 750px;
         background-color: rgba(255, 238, 1, 0.7);
         .title {
-          color: white;
-          font-size: 30px;
+          color: black;
+          opacity: 0.7;
+          font-size: 25px;
           text-align: center;
           font-family: serif;
           letter-spacing: 10px;
@@ -266,10 +233,12 @@ $breakpoint: 750px;
           margin-bottom: 25px;
         }
         .plan {
-          font-size: 45px;
+          font-size: 25px;
           color: black;
+          opacity: 0.7;
           text-align: center;
-          font-family: monospace;
+          font-family: serif;
+          letter-spacing: 8px;
           margin: 0 auto;
           width: 90%;
           padding-bottom: 80px;
@@ -277,17 +246,17 @@ $breakpoint: 750px;
           background-color: white;
         }
         .time {
-          font-size: 20px;
+          font-size: 18px;
           text-shadow: none;
         }
         .money {
-          font-size: 30px;
+          font-size: 20px;
           color: black;
           text-shadow: 0 0 100px rgba(255, 238, 1, 1);
           text-align: center;
           padding-top: 30px;
           .survies {
-            font-size: 30px;
+            font-size: 25px;
           }
         }
       }
@@ -297,7 +266,7 @@ $breakpoint: 750px;
           text-align: center;
           color: black;
           opacity: 0.7;
-          font-size: 30px;
+          font-size: 25px;
           margin-bottom: 20px;
           margin-top: 30px;
           letter-spacing: 10px;
@@ -333,12 +302,12 @@ $breakpoint: 750px;
         }
       }
       .address {
-        height: 470px;
+        height: 400px;
         .title {
           text-align: center;
           color: black;
           opacity: 0.7;
-          font-size: 30px;
+          font-size: 25px;
           margin-bottom: 20px;
           margin-top: 30px;
           letter-spacing: 10px;
@@ -359,12 +328,13 @@ $breakpoint: 750px;
             width: 100%;
           }
           &__info {
-            font-size: 20px;
+            font-size: 15px;
+            letter-spacing: 7px;
             font-family: serif;
             opacity: 0.7;
             text-shadow: 0 0 100px rgba(255, 238, 1, 1);
             .code {
-              margin-top: 20px;
+              margin-top: 10px;
               text-decoration: none;
               color: black;
               &:hover {
@@ -375,7 +345,7 @@ $breakpoint: 750px;
               display: flex;
               align-items: center;
               justify-content: center;
-              margin-top: 20px;
+              margin-top: 15px;
               .tell {
                 display: block;
                 text-decoration: none;
@@ -395,7 +365,7 @@ $breakpoint: 750px;
           text-align: center;
           color: black;
           opacity: 0.7;
-          font-size: 30px;
+          font-size: 25px;
           margin-top: 30px;
           letter-spacing: 10px;
           font-family: serif;
@@ -425,14 +395,15 @@ $breakpoint: 750px;
       }
     }
     .footer {
-      height: 220px;
+      height: 40vh;
       background-color: black;
       &__info {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 30px;
+        font-family: serif;
+        padding-top: 15%;
         .footer-image {
           width: 150px;
           height: 130px;
@@ -441,18 +412,18 @@ $breakpoint: 750px;
           color: rgb(255, 230, 0);
           margin-left: 10px;
           .name {
-            font-size: 20px;
-          }
-          .company {
             font-size: 15px;
           }
+          .company {
+            font-size: 10px;
+          }
           .boss {
-            font-size: 25px;
+            font-size: 20px;
           }
           .phone {
             text-decoration: none;
             color: rgb(255, 230, 0);
-            font-size: 20px;
+            font-size: 15px;
             &:hover {
               text-decoration: underline;
             }
