@@ -6,25 +6,14 @@
     = link_to "#main" do
       %i.fas.fa-angle-double-down
   .banner
-    .banner__info
-      = link_to "#header", class: "touch" do
-        About
-    .banner__info
-      = link_to "#system", class: "touch" do
-        %i.fas.fa-spinner
-        System
-    .banner__info
-      = link_to "#address", class: "touch" do
-        %i.far.fa-map
-        Address
-    .banner__info
-      = link_to "#insta", class: "touch" do
-        %i.fab.fa-instagram
-        Instagram
-    .banner__info
-      = link_to "#business", class: "touch" do
-        %i.far.fa-hourglass
-        Business
+    %input#checked.check{:type => "checkbox"}/
+    %label.fas.fa-bars{:for => "checked"}
+    %label.fab.fa-times{:for => "checked"}
+    %nav.drawer-menu
+      = link_to root_path, class: "top" do
+        TOP
+      = link_to root_path, class: "top" do
+        Woman
   .main
     #main
     .main__open
@@ -35,13 +24,13 @@
       .yoga
         = image_tag "yoga.png", size: "350x400", class: "yoga"
       .free
-        .free__in 今なら入会金が
+        .free__in 今なら入会金
         .free__in2 ￥0
     #system
     .main__system
       .title
         %i.fas.fa-spinner
-        System
+        SYSTEM
       .experiences
         完全予約制
       .experience
@@ -72,6 +61,7 @@
           .daytime 営業日時/営業時間
           .day 年中無休
           .day 24時間
+    %iframe{:src => "https://coubic.com/peace-fitness/widget/calendar?from_pc=agendaThreeDay&from_sp=agendaThreeDay", :style => "border: none; width: 100%; height: 300px;"}
     #address
     .address
       .title
@@ -117,5 +107,8 @@
     .btn__all
       = link_to "https://www.instagram.com/peace_fitness_training/?hl=ja", class: "insta" do
         %i.fab.fa-instagram
+  
+
+
       
 
